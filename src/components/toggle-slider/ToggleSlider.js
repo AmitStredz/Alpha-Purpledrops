@@ -16,6 +16,7 @@ const ToggleSlider = ({ id }) => {
         id={id}
         checked={checked}
         onChange={handleToggle}
+        disabled={true}
       />
       <label htmlFor={id} className="slider" />
     </div>

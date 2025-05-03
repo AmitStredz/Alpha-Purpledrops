@@ -154,6 +154,7 @@ const SwitchBoxSideBar = ({ botStatus, botIsEnabled }) => {
                           id={`${type}-toggle`}
                           checked={switches[type]}
                           onChange={() => handleToggle(type)}
+                          disabled={true}
                         />
                         <label htmlFor={`${type}-toggle`} className="slider" />
                       </div>
@@ -183,7 +184,7 @@ const SwitchBoxSideBar = ({ botStatus, botIsEnabled }) => {
             bottom: 0;
             background-color: #ccc;
             border-radius: 34px;
-            cursor: pointer;
+            cursor: not-allowed;
             transition: 0.4s;
           }
 

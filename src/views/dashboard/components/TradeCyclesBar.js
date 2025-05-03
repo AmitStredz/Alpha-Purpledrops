@@ -116,10 +116,10 @@ export default function TradeCyclesBar({
                 .map((item, index) => (
                   <div
                     key={index}
-                    className={`flex flex-col items-start gap-3 font-light rounded-lg border p-3 min-w-[280px] flex-shrink-0 cursor-pointer text-[14px]  ${
+                    className={`flex flex-col items-start gap-3 font-light bg-[#8601FF] rounded-lg border p-3 min-w-[280px] flex-shrink-0 cursor-pointer text-[14px]  ${
                       item?.cycle_number == selectedCycleNumber
-                        ? "bg-green-400"
-                        : "hover:bg-[#8601FF] hover:bg-opacity-20"
+                        ? " text-white"
+                        : "bg-opacity-70 hover:bg-opacity-80"
                     }`}
                     onClick={() => setSelectedCycleNumber(item?.cycle_number)}
                   >
