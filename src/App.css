@@ -1,0 +1,42 @@
+.gradient-bg {
+  text-align: center;
+  background: linear-gradient(
+    to bottom right,
+    rgb(9, 36, 26) 10%,
+    rgb(16, 29, 42) 50%,
+    rgb(82, 84, 101) 100%
+  );
+}
+
+.animate-slide {
+  animation: slide infinite 10s linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translate(250%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .animate-slide {
+    animation: slide infinite 5s linear;
+  }
+  @keyframes slide {
+    0% {
+      transform: translate(0%);
+    }
+    50% {
+      transform: translate(85%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
