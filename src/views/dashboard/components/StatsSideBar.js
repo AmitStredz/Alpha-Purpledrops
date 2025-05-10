@@ -67,7 +67,7 @@ const StatsSideBar = ({
 
               <span className="text-alphaGray">
                 Start balance:
-                <span className="font-bold">
+                <span className="font-bold text-[#8601FF]">
                   {Number(usdtBal || 0)?.toFixed(3)}
                 </span>
               </span>
