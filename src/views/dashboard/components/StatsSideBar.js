@@ -17,7 +17,7 @@ const StatsSideBar = ({
         <div className="flex flex-col">
           <div className="flex flex-row justify-start gap-4 items-center">
             <div className="">
-              <TfiStatsUp className="text-5xl text-[#8601FF] font-bold" />
+              <TfiStatsUp className="text-5xl text-green-500 font-bold" />
             </div>
             <div className=" flex flex-col items-start">
               <span className="font-extralight uppercase text-[14px]">
@@ -28,7 +28,7 @@ const StatsSideBar = ({
               </span>
               <span
                 className={`text-xl  font-bold ${
-                  currentProfit > 0 ? "text-[#8601FF]" : "text-red-500"
+                  currentProfit > 0 ? "text-green-500" : "text-red-500"
                 }`}
               >
                 {parseFloat(currentProfit || 0)?.toFixed(3)} USDT (
