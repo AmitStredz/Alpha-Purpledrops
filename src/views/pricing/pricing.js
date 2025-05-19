@@ -82,7 +82,7 @@ export default function Pricing() {
       const headers = { Authorization: `Token ${token}` };
 
       const createOrderResp = await axios.post(
-        "https://dca-alpha-bot-aa0c6c561214.herokuapp.com/api/users/create-razorpay-order/",
+        "https://dca-alpha-bot-be-do.alpharoboticsllp.com/api/users/create-razorpay-order/",
         {
           amount: cardList[0].totalInPaise,
           currency: "INR",
@@ -107,7 +107,7 @@ export default function Pricing() {
 
           try {
             const verifyResp = await axios.post(
-              "https://dca-alpha-bot-aa0c6c561214.herokuapp.com/api/users/payment-success/",
+              "https://dca-alpha-bot-be-do.alpharoboticsllp.com/api/users/payment-success/",
               {
                 razorpay_payment_id,
                 razorpay_order_id,
