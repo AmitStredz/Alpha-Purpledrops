@@ -17,9 +17,9 @@ export default function Pricing() {
     {
       title: "Purpledrops AI Trading Bot",
       plan: "One Year Plan",
-      primaryPrice: "₹15,250",
-      secondaryPrice: "+ 18% GST",
-      secondaryPrice2: "₹2,745",
+      primaryPrice: "₹18,500 /-",
+      // secondaryPrice: "+ 18% GST",
+      // secondaryPrice2: "₹2,745",
       totalInPaise: 1799500,
       descriptionList: [
         "Access to Purpledrops AI Bot for 12 months",
@@ -182,14 +182,14 @@ export default function Pricing() {
                 </h2>
                 <div className="flex items-end justify-center gap-3 font-zona">
                   <span className="text-3xl font-bold text-[#8601FF] ">
-                    {items.primaryPrice}/
+                    {items.primaryPrice}
                   </span>
-                  <div className="text-[15px] text-gray-500 font-semibold text-center w-full flex flex-col flex-nowrap">
+                  {/* <div className="text-[15px] text-gray-500 font-semibold text-center w-full flex flex-col flex-nowrap">
                     <span>{items.secondaryPrice}</span>
                     <span className="text-[#8601FF]">
                       {items.secondaryPrice2}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="w-full h-[1px] bg-slate-400"></div>
