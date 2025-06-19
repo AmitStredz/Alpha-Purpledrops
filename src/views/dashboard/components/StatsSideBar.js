@@ -8,6 +8,7 @@ const StatsSideBar = ({
   currentProfit,
   totalUsdtUsed,
   remainingUsdt,
+  tradeNumber,
 }) => {
   return (
     <div className="text-left w-full my-5 mx-auto bg-white rounded-lg">
@@ -32,7 +33,10 @@ const StatsSideBar = ({
                 }`}
               >
                 {parseFloat(currentProfit || 0)?.toFixed(3)} USDT (
-                {((parseFloat(currentProfit || 0) / parseFloat(usdtBal || 1)) * 100)?.toFixed(4)}
+                {(
+                  (parseFloat(currentProfit || 0) / parseFloat(usdtBal || 1)) *
+                  100
+                )?.toFixed(4)}
                 {"%"})
               </span>
               {/* <span className="mb-1">reset |</span> */}
@@ -57,7 +61,7 @@ const StatsSideBar = ({
                   <BsFillQuestionCircleFill />
                 </span>
               </span>
-              <span className="text-2xl text-green-400 font-bold">
+              <span className="text-2xl text-green-500 font-bold">
                 {Number(usdtBal || 0)?.toFixed(3)}
                 {/* {usdtBal} */}
                 {/* 1650 */}
@@ -67,7 +71,7 @@ const StatsSideBar = ({
 
               <span className="text-alphaGray">
                 Start balance:
-                <span className="font-bold text-[#8601FF]">
+                <span className="font-bold">
                   {Number(usdtBal || 0)?.toFixed(3)}
                 </span>
               </span>
@@ -76,15 +80,27 @@ const StatsSideBar = ({
         </div>
         <div className="flex flex-col gap-2 justify-between">
           <div className="flex items-center justify-between">
-            <span className="text-[14px]">Total USDT Used </span>
+            <span className="text-[14px]  flex flex-col items-start">
+              Total USDT{" "}
+              <span className=" text-[12px] text-yellow-500 rounded-md p-1 bg-yellow-100">
+                (TC: {tradeNumber})
+              </span>{" "}
+            </span>
             <span className="text-yellow-500 rounded-md p-2 bg-yellow-100">
-              {parseFloat(totalUsdtUsed || 0).toFixed(3)} USDT
+              {parseFloat(totalUsdtUsed || 0).toFixed(3)}{" "}
+              <span className="text-[12px]">USDT</span>
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-[14px]">Remaining USDT</span>
-            <span className="text-green-400 rounded-md p-2 bg-green-100">
-              {parseFloat(remainingUsdt || 0).toFixed(3)} USDT
+            <span className="text-[14px] flex flex-col items-start">
+              Remaining USDT{" "}
+              <span className="text-[12px] text-green-500 rounded-md p-1 bg-green-100">
+                (TC: {tradeNumber})
+              </span>
+            </span>
+            <span className="text-green-500 rounded-md p-2 bg-green-100">
+              {parseFloat(remainingUsdt || 0).toFixed(3)}{" "}
+              <span className="text-[12px]">USDT</span>
             </span>
           </div>
         </div>

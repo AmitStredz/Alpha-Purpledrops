@@ -12,6 +12,7 @@ export default function TradeCyclesBar({
   setLiveMarketPrice,
   setTotalUsdtUsed,
   setRemainingUsdt,
+  setTradeNumber,
   isBotEnabled,
   fetchData,
 }) {
@@ -96,8 +97,9 @@ export default function TradeCyclesBar({
     setBotReason(tradeData?.reason_inactive);
     setLiveMarketPrice(tradeData?.trade_cycles?.[0]?.current_market_price);
     setTradeCycleNo(tradeData?.trade_cycles?.[0]?.cycle_number);
-    setTotalUsdtUsed(tradeData?.trade_cycles?.[0]?.used_capital || 0);
-    setRemainingUsdt(tradeData?.trade_cycles?.[0]?.remaining_capital || 0);
+    setTotalUsdtUsed(tradeData?.trade_cycles?.[tradeData?.trade_cycles?.length - 1]?.used_capital || 0);
+    setRemainingUsdt(tradeData?.trade_cycles?.[tradeData?.trade_cycles?.length - 1]?.remaining_capital || 0);
+    setTradeNumber(tradeData?.trade_cycles?.[tradeData?.trade_cycles?.length - 1]?.cycle_number)
   }, [tradeData]);
   return (
     <div className="flex flex-col gap-5">

@@ -33,6 +33,7 @@ export default function Dashboard() {
   const [liveMarketPrice, setLiveMarketPrice] = useState(null);
   const [totalUsdtUsed, setTotalUsdtUsed] = useState(null);
   const [remainingUsdt, setRemainingUsdt] = useState(null);
+  const [tradeNumber, setTradeNumber] = useState(null);
   const [fetchTradeCycleData, setFetchTradeCycleData] = useState(true);
 
   const token = localStorage.getItem("token");
@@ -191,6 +192,7 @@ export default function Dashboard() {
             currentProfit={currentProfit}
             totalUsdtUsed={totalUsdtUsed}
             remainingUsdt={remainingUsdt}
+            tradeNumber={tradeNumber}
           />
           <SwitchBoxSideBar
             botStatus={botStatus}
@@ -305,6 +307,7 @@ export default function Dashboard() {
               setLiveMarketPrice={(e) => setLiveMarketPrice(e)}
               setTotalUsdtUsed={(e) => setTotalUsdtUsed(e)}
               setRemainingUsdt={(e) => setRemainingUsdt(e)}
+              setTradeNumber={(e) => setTradeNumber(e)}
               isBotEnabled={botIsEnabled}
               fetchData={fetchTradeCycleData}
             />
